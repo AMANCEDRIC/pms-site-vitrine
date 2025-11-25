@@ -1,0 +1,6 @@
+<div class="star-rating" [class.size-sm]="size === 'sm'" [class.size-md]="size === 'md'" [class.size-lg]="size === 'lg'">
+  @for (star of stars; track $index) {
+    <span class="star" [class.filled]="star">★</span>
+  }
+</div>
+

@@ -1,0 +1,53 @@
+<section class="relative hero-banner-section overflow-hidden">
+  <!-- Background Image with Animation -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      [src]="backgroundImage" 
+      alt="Hero background"
+      class="w-full h-full object-cover"
+      style="animation: zoomIn 30s ease-in-out infinite, fadeIn 1s ease-in;">
+    <!-- Gradient Overlay - Lighter for better image visibility -->
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-900/60 via-primary-700/50 to-orange-800/60 animate-fade-in"></div>
+    
+    <!-- Animated decorative elements -->
+    <div class="absolute inset-0 opacity-40">
+      <!-- More floating particles with larger sizes -->
+      <div class="absolute top-1/5 left-1/5 w-3 h-3 bg-white rounded-full animate-float shadow-lg" style="animation-delay: 0s; animation-duration: 6s;"></div>
+      <div class="absolute top-1/3 right-1/5 w-2.5 h-2.5 bg-white rounded-full animate-float shadow-lg" style="animation-delay: 2s; animation-duration: 8s;"></div>
+      <div class="absolute bottom-1/5 left-1/4 w-2 h-2 bg-white rounded-full animate-float shadow-lg" style="animation-delay: 4s; animation-duration: 7s;"></div>
+      <div class="absolute top-1/2 right-1/4 w-3 h-3 bg-white rounded-full animate-float shadow-lg" style="animation-delay: 1s; animation-duration: 9s;"></div>
+      <div class="absolute top-2/3 left-1/3 w-2 h-2 bg-white rounded-full animate-float shadow-lg" style="animation-delay: 3s; animation-duration: 10s;"></div>
+      <div class="absolute bottom-1/3 right-1/5 w-2.5 h-2.5 bg-white rounded-full animate-float shadow-lg" style="animation-delay: 5s; animation-duration: 8s;"></div>
+      
+      <!-- Animated light rays effect - More visible -->
+      <div class="absolute top-0 left-1/4 w-0.5 h-full bg-gradient-to-b from-transparent via-white/30 to-transparent animate-pulse-slow" style="animation-duration: 3s;"></div>
+      <div class="absolute top-0 right-1/3 w-0.5 h-full bg-gradient-to-b from-transparent via-white/25 to-transparent animate-pulse-slow" style="animation-delay: 1.5s; animation-duration: 4s;"></div>
+      <div class="absolute top-0 left-1/2 w-0.5 h-full bg-gradient-to-b from-transparent via-white/20 to-transparent animate-pulse-slow" style="animation-delay: 0.8s; animation-duration: 5s;"></div>
+      
+      <!-- Animated grid pattern -->
+      <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite;"></div>
+    </div>
+    
+    <!-- Binary code overlay effect (optional tech theme) -->
+    <div class="absolute inset-0 opacity-15 font-mono text-xs text-white/30 overflow-hidden">
+      <div class="absolute top-10 left-10 animate-slide-in-left" style="animation-duration: 2s;">01010000 01001101 01010011</div>
+      <div class="absolute top-20 right-20 animate-slide-in-right" style="animation-duration: 2.5s;">01001000 01100101 01101100</div>
+      <div class="absolute bottom-20 left-20 animate-slide-in-left" style="animation-duration: 3s;">01101111 00100000 01010111</div>
+      <div class="absolute bottom-10 right-10 animate-slide-in-right" style="animation-duration: 2.8s;">01101111 01110010 01101100 01100100</div>
+    </div>
+  </div>
+  
+  <!-- Content -->
+  <div class="container-custom relative z-10">
+    <div class="text-center max-w-4xl mx-auto py-8 md:py-10">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 animate-fade-in-up drop-shadow-2xl" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5); animation-duration: 0.8s;">
+        {{ title }}
+      </h1>
+      <p class="text-base md:text-lg lg:text-xl text-white/95 leading-relaxed animate-fade-in-up drop-shadow-lg" style="animation-delay: 0.3s; text-shadow: 0 2px 10px rgba(0,0,0,0.4); animation-duration: 0.8s;">
+        {{ subtitle }}
+      </p>
+    </div>
+  </div>
+</section>
+
+

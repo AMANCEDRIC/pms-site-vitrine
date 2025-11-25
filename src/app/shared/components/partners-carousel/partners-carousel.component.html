@@ -1,0 +1,91 @@
+<div class="partners-section" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+  <!-- Badge CERTIFICATION -->
+  <div class="flex justify-center mb-6 animate-fade-in-up">
+    <span class="inline-block bg-primary-500 text-white px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wide shadow-md">
+      Certification
+    </span>
+  </div>
+
+  <!-- Carousel Container -->
+  <div class="relative">
+    <!-- Carousel Wrapper avec animation -->
+    <div class="overflow-hidden">
+      <div 
+        class="flex transition-transform duration-500 ease-in-out"
+        [style.transform]="'translateX(-' + (currentIndex * (100 / itemsPerView)) + '%)'">
+        @for (partner of partners; track partner.name; let i = $index) {
+          <div 
+            class="flex-shrink-0 px-3"
+            [style.width]="(100 / itemsPerView) + '%'">
+            <!-- Carte partenaire -->
+            <div 
+              class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group border border-gray-100 h-full flex flex-col animate-fade-in-up"
+              [style.animation-delay]="(i * 0.1) + 's'">
+              <!-- Logo Container -->
+              <div class="flex-1 flex items-center justify-center mb-4 min-h-[120px]">
+                <img 
+                  [src]="partner.logo" 
+                  [alt]="partner.name"
+                  class="max-w-full max-h-20 object-contain transition-all duration-300 group-hover:scale-110"
+                  (error)="onImageError($event)">
+              </div>
+              
+              <!-- Description -->
+              @if (partner.description) {
+                <div class="text-center mt-auto pt-4 border-t border-gray-100">
+                  <p class="text-sm text-gray-600 font-medium leading-tight">
+                    {{ partner.description }}
+                  </p>
+                </div>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    @if (partners.length > itemsPerView) {
+      <div class="flex justify-center gap-4 mt-8">
+        <button 
+          type="button"
+          class="w-14 h-14 rounded-full bg-primary-600 text-white hover:bg-primary-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+          (click)="prev()"
+          [disabled]="!canGoPrev"
+          aria-label="Précédent">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <button 
+          type="button"
+          class="w-14 h-14 rounded-full bg-primary-600 text-white hover:bg-primary-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+          (click)="next()"
+          [disabled]="!canGoNext"
+          aria-label="Suivant">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    }
+
+    <!-- Indicateurs de position -->
+    @if (partners.length > itemsPerView && getTotalPages() > 1) {
+      <div class="flex justify-center gap-2 mt-6">
+        @for (dot of getDots(); track $index) {
+          <button
+            type="button"
+            class="h-2 rounded-full transition-all duration-300"
+            [class.bg-primary-600]="$index === getCurrentPage()"
+            [class.bg-gray-300]="$index !== getCurrentPage()"
+            [class.w-8]="$index === getCurrentPage()"
+            [class.w-2]="$index !== getCurrentPage()"
+            (click)="goToPage($index)"
+            [attr.aria-label]="'Aller à la page ' + ($index + 1)">
+          </button>
+        }
+      </div>
+    }
+  </div>
+</div>

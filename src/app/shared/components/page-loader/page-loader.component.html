@@ -1,0 +1,35 @@
+@if (isLoading) {
+  <div 
+    class="fixed inset-0 z-[9999] bg-white flex items-center justify-center transition-opacity duration-500"
+    [class.opacity-0]="!isLoading"
+    [class.pointer-events-none]="!isLoading">
+    <div class="text-center animate-fade-in">
+      <!-- Logo avec animation de rotation et pulse -->
+      <div class="relative mb-6">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <!-- Cercle de chargement animé -->
+          <div class="w-32 h-32 md:w-40 md:h-40 border-4 border-primary-200 rounded-full animate-spin-slow"></div>
+          <div class="w-28 h-28 md:w-36 md:h-36 border-4 border-orange-200 rounded-full animate-spin-reverse absolute"></div>
+        </div>
+        <!-- Logo au centre -->
+        <div class="relative z-10 animate-pulse-slow">
+          <img 
+            src="assets/images/logo/logo-pms.png" 
+            alt="PMS Informatique"
+            class="w-24 h-24 md:w-32 md:h-32 object-contain mx-auto drop-shadow-lg">
+        </div>
+      </div>
+      
+      <!-- Barre de progression -->
+      <div class="w-48 md:w-64 h-1.5 bg-gray-200 rounded-full overflow-hidden mx-auto">
+        <div class="h-full bg-gradient-to-r from-primary-600 via-orange-500 to-primary-600 rounded-full animate-progress"></div>
+      </div>
+      
+      <!-- Texte optionnel -->
+      <p class="mt-6 text-sm md:text-base text-gray-600 font-medium animate-pulse">
+        Chargement...
+      </p>
+    </div>
+  </div>
+}
+

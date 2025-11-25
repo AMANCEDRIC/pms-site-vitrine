@@ -1,0 +1,11 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 7.5rem; /* 120px pour compenser topbar (h-10 = 2.5rem) + navbar (h-20 = 5rem) */
+}
+

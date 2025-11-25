@@ -1,0 +1,21 @@
+@if (showButton) {
+  <button
+    (click)="scroll()"
+    class="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-primary-600 text-white shadow-lg hover:bg-primary-700 transition-all duration-300 flex items-center justify-center group hover:scale-110 animate-fade-in-up"
+    [attr.aria-label]="isAtTop ? 'Aller en bas' : 'Aller en haut'"
+    type="button">
+    <svg 
+      class="w-6 h-6 transition-transform duration-300"
+      [class.rotate-180]="isAtTop"
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+    <!-- Tooltip -->
+    <span class="absolute bottom-full right-0 mb-2 px-3 py-1 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+      {{ isAtTop ? 'Aller en bas' : 'Aller en haut' }}
+    </span>
+  </button>
+}
+

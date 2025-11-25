@@ -1,0 +1,275 @@
+<div class="min-h-screen">
+  <!-- Hero Section -->
+  <app-hero-banner 
+    title="Savoir-faire"
+    subtitle="Notre expertise et nos compétences au service de vos projets">
+  </app-hero-banner>
+
+  <!-- Main Content Section - Structure like Qui sommes-nous -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Texte + Infos -->
+        <div class="space-y-6 animate-fade-in-up">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            Notre Expertise
+          </h1>
+          
+          <!-- 2 icônes avec texte -->
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="flex items-center gap-4 p-4 bg-primary-50 rounded-lg">
+              <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <h5 class="font-semibold text-gray-900">20 ans d'expérience</h5>
+            </div>
+            <div class="flex items-center gap-4 p-4 bg-primary-50 rounded-lg">
+              <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                </svg>
+              </div>
+              <h5 class="font-semibold text-gray-900">Qualité certifiée</h5>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="space-y-4 text-gray-600 leading-relaxed">
+            <p class="text-lg">
+              En <strong class="text-orange-500">vingt années d'existence</strong>, PMS Informatique a imposé son image de <strong class="text-primary-600">professionnalisme</strong> et de <strong class="text-primary-600">qualité de service</strong> dans tous ses domaines d'activité.
+            </p>
+            <p>
+              Notre expertise s'étend sur plusieurs domaines clés : <strong class="text-primary-600">systèmes d'information</strong>, <strong class="text-primary-600">management de projet</strong>, <strong class="text-primary-600">intégration de services</strong>, et bien plus encore.
+            </p>
+            <p>
+              Nous mettons notre savoir-faire au service de vos projets pour vous accompagner dans votre transformation digitale et l'optimisation de vos processus.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Image en format Squircle -->
+        <div class="flex items-center justify-center animate-fade-in-up" style="animation-delay: 0.2s">
+          <div class="relative animate-scale-in" style="animation-delay: 0.3s">
+            <img 
+              [src]="formationImage" 
+              alt="Formation et expertise PMS"
+              class="w-full max-w-md shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
+              style="border-radius: 40% 60% 50% 50% / 50% 50% 60% 40%;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nos Atouts Section - 3 Cartes compactes -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <!-- Titre principal -->
+      <div class="text-center mb-12 animate-fade-in-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nos Atouts</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary-600 to-orange-500 mx-auto"></div>
+      </div>
+
+      <!-- 3 Cartes en grille -->
+      <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        
+        <!-- Carte 1: Expertise & Expérience -->
+        <div class="p-5 bg-gradient-to-br from-primary-50 to-white rounded-lg border border-primary-100 hover:shadow-lg transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.1s;">
+          <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Expertise & Expérience</h3>
+          <div class="space-y-3 text-sm md:text-base text-gray-700 leading-relaxed">
+            <p>
+              Notre <strong class="text-primary-600">expérience des systèmes d'informations</strong>, publics et privés, en organisation, conception, réalisation et mise en œuvre.
+            </p>
+            <p>
+              Plus de <strong class="text-primary-600">20 ans d'expertise</strong> dans le domaine des technologies de l'information.
+            </p>
+          </div>
+        </div>
+
+        <!-- Carte 2: Management & Intégration -->
+        <div class="p-5 bg-gradient-to-br from-orange-50 to-white rounded-lg border border-orange-100 hover:shadow-lg transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.2s;">
+          <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Management & Intégration</h3>
+          <div class="space-y-3 text-sm md:text-base text-gray-700 leading-relaxed">
+            <p>
+              Notre capacité de <strong class="text-orange-500">management de projet</strong> et d'<strong class="text-orange-500">intégration de services</strong> pour garantir la réussite de vos projets.
+            </p>
+            <p>
+              Réalisation de <strong class="text-orange-600">produits spécifiques</strong> adaptés à vos besoins uniques.
+            </p>
+          </div>
+        </div>
+
+        <!-- Carte 3: Solutions & Partenaires -->
+        <div class="p-5 bg-gradient-to-br from-primary-50 to-white rounded-lg border border-primary-100 hover:shadow-lg transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.3s;">
+          <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Solutions & Partenaires</h3>
+          <div class="space-y-3 text-sm md:text-base text-gray-700 leading-relaxed">
+            <p>
+              Notre <strong class="text-primary-600">offre de solutions et de services</strong> complète pour répondre à tous vos besoins.
+            </p>
+            <p>
+              Un réseau de <strong class="text-primary-600">partenaires de confiance</strong> et une <strong class="text-primary-600">implantation locale</strong> pour une proximité optimale.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- La nature de nos interventions Section -->
+  <section class="relative py-12 md:py-16 overflow-hidden">
+    <!-- Background Image with Blur -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="assets/images/photos/IMG9.jpeg" 
+        alt="Interventions background"
+        class="w-full h-full object-cover"
+        style="filter: blur(8px); transform: scale(1.1);">
+      <div class="absolute inset-0 bg-white/60"></div>
+    </div>
+
+    <div class="container-custom relative z-10">
+      <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-8 md:mb-10 animate-fade-in-up">
+          <div class="flex items-center justify-center gap-3 mb-3">
+            <svg class="w-5 h-5 md:w-6 md:h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+            </svg>
+            <h2 class="text-2xl md:text-3xl font-bold text-primary-600 uppercase">La nature de nos interventions</h2>
+          </div>
+          <p class="text-base md:text-lg text-gray-800 leading-relaxed max-w-3xl mx-auto font-medium">
+            Nous intervenons sur tous les aspects de vos projets informatiques, de l'audit à l'assistance technique.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4 animate-fade-in-up" style="animation-delay: 0.2s;">
+          <!-- Audit et conseil -->
+          <div class="p-5 bg-white/95 backdrop-blur-sm rounded-lg border border-primary-200 shadow-md hover:shadow-xl hover:border-primary-400 hover:bg-white transition-all duration-300">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                </svg>
+              </div>
+              <h4 class="font-bold text-gray-900">Audit et conseil</h4>
+            </div>
+          </div>
+
+          <!-- Assistance en Maîtrise d'ouvrage -->
+          <div class="p-5 bg-white/95 backdrop-blur-sm rounded-lg border border-orange-200 shadow-md hover:shadow-xl hover:border-orange-400 hover:bg-white transition-all duration-300">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <h4 class="font-bold text-gray-900">Assistance en Maîtrise d'ouvrage</h4>
+            </div>
+          </div>
+
+          <!-- Maîtrise d'œuvre -->
+          <div class="p-5 bg-white/95 backdrop-blur-sm rounded-lg border border-primary-200 shadow-md hover:shadow-xl hover:border-primary-400 hover:bg-white transition-all duration-300">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+              </div>
+              <h4 class="font-bold text-gray-900">Maîtrise d'œuvre</h4>
+            </div>
+          </div>
+
+          <!-- Étude, Conception et Réalisation -->
+          <div class="p-5 bg-white/95 backdrop-blur-sm rounded-lg border border-orange-200 shadow-md hover:shadow-xl hover:border-orange-400 hover:bg-white transition-all duration-300">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+              <h4 class="font-bold text-gray-900">Étude, Conception et Réalisation</h4>
+            </div>
+          </div>
+
+          <!-- Intégration de solutions -->
+          <div class="p-5 bg-white/95 backdrop-blur-sm rounded-lg border border-primary-200 shadow-md hover:shadow-xl hover:border-primary-400 hover:bg-white transition-all duration-300">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+                </svg>
+              </div>
+              <h4 class="font-bold text-gray-900">Intégration de solutions</h4>
+            </div>
+          </div>
+
+          <!-- Conduite de projet -->
+          <div class="p-5 bg-white/95 backdrop-blur-sm rounded-lg border border-orange-200 shadow-md hover:shadow-xl hover:border-orange-400 hover:bg-white transition-all duration-300">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                </svg>
+              </div>
+              <h4 class="font-bold text-gray-900">Conduite de projet</h4>
+            </div>
+          </div>
+
+          <!-- Contrôle qualité -->
+          <div class="p-5 bg-white/95 backdrop-blur-sm rounded-lg border border-primary-200 shadow-md hover:shadow-xl hover:border-primary-400 hover:bg-white transition-all duration-300">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h4 class="font-bold text-gray-900">Contrôle qualité</h4>
+            </div>
+          </div>
+
+          <!-- Formation -->
+          <div class="p-5 bg-white/95 backdrop-blur-sm rounded-lg border border-orange-200 shadow-md hover:shadow-xl hover:border-orange-400 hover:bg-white transition-all duration-300">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              </div>
+              <h4 class="font-bold text-gray-900">Formation</h4>
+            </div>
+          </div>
+
+          <!-- Assistance technique -->
+          <div class="p-5 bg-white/95 backdrop-blur-sm rounded-lg border border-primary-200 shadow-md hover:shadow-xl hover:border-primary-400 hover:bg-white transition-all duration-300">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <h4 class="font-bold text-gray-900">Assistance technique</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

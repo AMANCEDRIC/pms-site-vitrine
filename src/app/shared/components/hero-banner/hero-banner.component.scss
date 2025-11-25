@@ -1,0 +1,12 @@
+.hero-banner-section {
+  min-height: 250px;
+  
+  @media (min-width: 768px) {
+    min-height: 300px;
+  }
+  
+  @media (min-width: 1024px) {
+    min-height: 350px;
+  }
+}
+
