@@ -4,13 +4,12 @@ import { RouterModule } from '@angular/router';
 import { HeroBannerComponent } from '../../../shared/components/hero-banner/hero-banner.component';
 
 @Component({
-  selector: 'app-savoir-faire',
+  selector: 'app-installation-reseau',
   standalone: true,
   imports: [CommonModule, RouterModule, HeroBannerComponent],
-  templateUrl: './savoir-faire.component.html',
-  styleUrl: './savoir-faire.component.scss'
+  templateUrl: './installation-reseau.component.html',
+  styleUrl: './installation-reseau.component.scss'
 })
-export class SavoirFaireComponent {
-  formationImage = 'assets/images/photos/img10.jpeg';
-}
+export class InstallationReseauComponent {
 
+}

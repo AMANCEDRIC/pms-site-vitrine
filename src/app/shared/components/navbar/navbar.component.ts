@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   isScrolled = false;
   isVisible = true;
   isPresentationDropdownOpen = false;
+  isServicesDropdownOpen = false;
   private scrollThreshold = 50; // Pixels de scroll avant d'activer l'animation
   private lastScrollPosition = 0;
   private hideTimeout?: any;
@@ -96,6 +97,18 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   closePresentationDropdown() {
     this.isPresentationDropdownOpen = false;
+  }
+
+  toggleServicesDropdown() {
+    this.isServicesDropdownOpen = !this.isServicesDropdownOpen;
+  }
+
+  openServicesDropdown() {
+    this.isServicesDropdownOpen = true;
+  }
+
+  closeServicesDropdown() {
+    this.isServicesDropdownOpen = false;
   }
 }
 

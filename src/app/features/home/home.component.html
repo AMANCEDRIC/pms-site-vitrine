@@ -8,7 +8,7 @@
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Texte + Infos -->
         <div class="space-y-6 animate-fade-in-up">
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h1 class="font-bebas tracking-wide text-4xl md:text-5xl text-gray-900 leading-tight">
             Accompagnement Sage & Services Informatiques
           </h1>
           
@@ -108,7 +108,7 @@
     <div class="container-custom">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-8 animate-fade-in-up">
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h1 class="font-bebas tracking-wide text-4xl md:text-5xl text-gray-900 leading-tight">
             Pourquoi choisir PMS Inf<span class="text-orange-500">o</span>rmatique ?
           </h1>
           <p class="text-lg text-gray-600 leading-relaxed">
@@ -150,7 +150,7 @@
         <div class="relative animate-fade-in-up" style="animation-delay: 0.3s">
           <div class="rounded-[50px] overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
             <img 
-              src="assets/images/photos/IMG4.jpeg" 
+              src="assets/images/photos/image00099.jpeg" 
               alt="Photo PMS" 
               class="w-full h-full object-cover">
           </div>
@@ -179,17 +179,17 @@
         <p class="text-lg text-gray-600">Des solutions adaptées à vos besoins</p>
       </div>
       
-      <div class="grid md:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-3 gap-5">
         @for (service of services; track service.title; let i = $index) {
           <div 
             class="group cursor-pointer animate-fade-in-up"
             [style.animation-delay]="(0.2 + i * 0.15) + 's'">
             <!-- Définir les couleurs de bordure selon l'index -->
             <div 
-              [class]="i === 0 ? 'bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col overflow-hidden border-4 border-yellow-400' : (i === 1 ? 'bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col overflow-hidden border-4 border-primary-600' : 'bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col overflow-hidden border-4 border-orange-500')">
+              [class]="i === 0 ? 'bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col overflow-hidden border-2 border-yellow-400' : (i === 1 ? 'bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col overflow-hidden border-2 border-primary-600' : 'bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col overflow-hidden border-2 border-orange-500')">
               
               <!-- Image avec icône ampoule en overlay -->
-              <div class="relative flex-1 min-h-[150px] overflow-hidden bg-gray-200">
+              <div class="relative h-[120px] overflow-hidden bg-gray-200">
                 <img 
                   [src]="service.image" 
                   [alt]="service.title" 
@@ -197,22 +197,22 @@
                   (error)="onImageError($event)">
                 
                 <!-- Icône ampoule en overlay (coin inférieur gauche) -->
-                <div class="absolute bottom-3 left-3 z-10">
+                <div class="absolute bottom-2 left-2 z-10">
                   @if (i === 0) {
-                    <div class="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center shadow-lg">
-                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="w-9 h-9 bg-yellow-400 rounded-lg flex items-center justify-center shadow-lg">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                       </svg>
                     </div>
                   } @else if (i === 1) {
-                    <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center shadow-lg">
-                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="w-9 h-9 bg-primary-600 rounded-lg flex items-center justify-center shadow-lg">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                       </svg>
                     </div>
                   } @else {
-                    <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center shadow-lg">
-                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="w-9 h-9 bg-orange-500 rounded-lg flex items-center justify-center shadow-lg">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                       </svg>
                     </div>
@@ -221,30 +221,30 @@
                 
                 <!-- Placeholder si l'image ne charge pas -->
                 <div class="image-placeholder hidden absolute inset-0 items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
-                  <div class="text-center p-6">
+                  <div class="text-center p-4">
                     @if (service.iconSvg === 'integrateur') {
-                      <svg class="w-20 h-20 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg class="w-16 h-16 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                       </svg>
                     }
                     @if (service.iconSvg === 'developpement') {
-                      <svg class="w-20 h-20 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg class="w-16 h-16 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                       </svg>
                     }
                     @if (service.iconSvg === 'formation') {
-                      <svg class="w-20 h-20 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg class="w-16 h-16 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                       </svg>
                     }
-                    <p class="text-gray-500 font-medium text-sm px-4">{{ service.title }}</p>
+                    <p class="text-gray-500 font-medium text-xs px-2">{{ service.title }}</p>
                   </div>
                 </div>
               </div>
 
               <!-- Contenu texte -->
-              <div class="p-4 bg-white">
-                <h3 class="text-lg font-bold text-gray-900 mb-2">{{ service.title }}</h3>
+              <div class="p-3 bg-white">
+                <h3 class="text-sm font-bold text-gray-900 mb-1.5">{{ service.title }}</h3>
                 <p class="text-gray-600 text-xs leading-relaxed mb-2 line-clamp-2">
                   {{ service.description }}
                 </p>
@@ -253,8 +253,8 @@
                 <div class="flex justify-end">
                   <a 
                     [routerLink]="service.link" 
-                    class="w-10 h-10 rounded-full bg-white border-2 border-gray-200 hover:border-primary-600 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md hover:shadow-lg">
-                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    class="w-9 h-9 rounded-full bg-white border-2 border-gray-200 hover:border-primary-600 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md hover:shadow-lg">
+                    <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                   </a>

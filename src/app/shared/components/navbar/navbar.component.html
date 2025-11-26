@@ -100,13 +100,65 @@
             </div>
           </div>
         </li>
-        <li>
+        <li class="relative" 
+            (mouseenter)="openServicesDropdown()" 
+            (mouseleave)="closeServicesDropdown()">
           <a 
             routerLink="/services" 
+            [routerLinkActiveOptions]="{exact: false}"
             routerLinkActive="text-primary-600 border-b-2 border-primary-600"
-            class="text-gray-700 font-medium hover:text-primary-600 transition-colors duration-300 pb-1 border-b-2 border-transparent">
+            class="text-gray-700 font-medium hover:text-primary-600 transition-colors duration-300 pb-1 border-b-2 border-transparent flex items-center gap-1 cursor-pointer">
             Services
+            <svg class="w-4 h-4 transition-transform duration-300" 
+                 [class.rotate-180]="isServicesDropdownOpen"
+                 fill="none" 
+                 stroke="currentColor" 
+                 viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
           </a>
+          
+          <!-- Dropdown Menu Services -->
+          <div 
+            class="absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 z-50"
+            [class.opacity-0]="!isServicesDropdownOpen"
+            [class.invisible]="!isServicesDropdownOpen"
+            [class.opacity-100]="isServicesDropdownOpen"
+            [class.visible]="isServicesDropdownOpen">
+            <div class="py-1">
+              <a 
+                routerLink="/services/integrateur-solution"
+                (click)="closeServicesDropdown()"
+                routerLinkActive="bg-primary-50 text-primary-600"
+                class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-200">
+                Intégrateur de Solution
+              </a>
+              <div class="border-t border-gray-200"></div>
+              <a 
+                routerLink="/services/installation-reseau"
+                (click)="closeServicesDropdown()"
+                routerLinkActive="bg-primary-50 text-primary-600"
+                class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-200">
+                Installation de réseau
+              </a>
+              <div class="border-t border-gray-200"></div>
+              <a 
+                routerLink="/services/developpement"
+                (click)="closeServicesDropdown()"
+                routerLinkActive="bg-primary-50 text-primary-600"
+                class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-200">
+                Développement
+              </a>
+              <div class="border-t border-gray-200"></div>
+              <a 
+                routerLink="/services/formation"
+                (click)="closeServicesDropdown()"
+                routerLinkActive="bg-primary-50 text-primary-600"
+                class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-200">
+                Formation
+              </a>
+            </div>
+          </div>
         </li>
         <li>
           <a 
@@ -143,7 +195,8 @@
         <li>
           <a 
             routerLink="/contact" 
-            class="btn-primary text-sm">
+            routerLinkActive="text-orange-500 border-orange-500"
+            class="text-gray-700 font-medium hover:text-orange-500 transition-all duration-300 px-4 py-2 border-2 border-dashed border-orange-500 rounded-md hover:border-orange-600">
             Contact
           </a>
         </li>
@@ -231,13 +284,55 @@
           </div>
         </li>
         <li>
-          <a 
-            routerLink="/services" 
-            (click)="closeMenu()"
-            routerLinkActive="text-primary-600"
-            class="text-gray-700 font-medium hover:text-primary-600 transition-colors block py-2">
-            Services
-          </a>
+          <div class="py-2">
+            <button 
+              (click)="toggleServicesDropdown()"
+              class="text-gray-700 font-medium hover:text-primary-600 transition-colors flex items-center gap-2 w-full text-left">
+              Services
+              <svg class="w-4 h-4 transition-transform duration-300" 
+                   [class.rotate-180]="isServicesDropdownOpen"
+                   fill="none" 
+                   stroke="currentColor" 
+                   viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div 
+              class="overflow-hidden transition-all duration-300"
+              [class.max-h-0]="!isServicesDropdownOpen"
+              [class.max-h-96]="isServicesDropdownOpen">
+              <div class="pl-4 pt-2 space-y-1">
+                <a 
+                  routerLink="/services/integrateur-solution"
+                  (click)="closeMenu(); closeServicesDropdown()"
+                  routerLinkActive="text-primary-600 font-semibold"
+                  class="block py-2 text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  Intégrateur de Solution
+                </a>
+                <a 
+                  routerLink="/services/installation-reseau"
+                  (click)="closeMenu(); closeServicesDropdown()"
+                  routerLinkActive="text-primary-600 font-semibold"
+                  class="block py-2 text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  Installation de réseau
+                </a>
+                <a 
+                  routerLink="/services/developpement"
+                  (click)="closeMenu(); closeServicesDropdown()"
+                  routerLinkActive="text-primary-600 font-semibold"
+                  class="block py-2 text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  Développement
+                </a>
+                <a 
+                  routerLink="/services/formation"
+                  (click)="closeMenu(); closeServicesDropdown()"
+                  routerLinkActive="text-primary-600 font-semibold"
+                  class="block py-2 text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                  Formation
+                </a>
+              </div>
+            </div>
+          </div>
         </li>
         <li>
           <a 
@@ -279,7 +374,8 @@
           <a 
             routerLink="/contact" 
             (click)="closeMenu()"
-            class="btn-primary text-sm text-center block">
+            routerLinkActive="text-orange-500 border-orange-500"
+            class="text-gray-700 font-medium hover:text-orange-500 transition-all duration-300 block py-2 px-4 border-2 border-dashed border-orange-500 rounded-md hover:border-orange-600 text-center">
             Contact
           </a>
         </li>

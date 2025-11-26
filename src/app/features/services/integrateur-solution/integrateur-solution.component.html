@@ -1,0 +1,109 @@
+<div class="min-h-screen">
+  <!-- Hero Section -->
+  <app-hero-banner 
+    title="Intégrateur de Solution"
+    subtitle="Solutions intégrées sur mesure pour votre entreprise">
+  </app-hero-banner>
+
+  <!-- Solutions Section -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12 animate-fade-in-up">
+          <!-- Icône barres -->
+          <div class="flex justify-center mb-4">
+            <div class="flex items-end gap-1 h-8">
+              <div class="w-1 h-4 bg-primary-600 rounded-full"></div>
+              <div class="w-1 h-6 bg-primary-600 rounded-full"></div>
+              <div class="w-1 h-8 bg-primary-600 rounded-full"></div>
+            </div>
+          </div>
+
+          <!-- Label -->
+          <div class="inline-block">
+            <span class="text-primary-600 font-bold text-sm uppercase tracking-wider">
+              INTÉGRATEUR DE SOLUTION
+            </span>
+          </div>
+        </div>
+
+        <!-- Grille des solutions - 3 colonnes avec images de fond -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          @for (solution of solutions; track solution.title; let i = $index) {
+            <div 
+              class="group cursor-pointer animate-fade-in-up bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col overflow-hidden hover:-translate-y-2"
+              [class.border-2]="i === 1"
+              [class.border-green-400]="i === 1"
+              [class.animate-bounce-in]="i === 0"
+              [class.animate-slide-in-left]="i === 1"
+              [class.animate-slide-in-right]="i === 2"
+              [class.animate-scale-in]="i >= 3"
+              [style.animation-delay]="(0.1 + i * 0.1) + 's'">
+              
+              <!-- Image avec icône ampoule en overlay -->
+              <div class="relative h-[120px] overflow-hidden bg-gray-200">
+                <img 
+                  [src]="solution.image" 
+                  [alt]="solution.title" 
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  (error)="onImageError($event)">
+                
+                <!-- Icône ampoule en overlay (coin inférieur gauche) -->
+                <div class="absolute bottom-2 left-2 z-10 animate-float" [style.animation-delay]="(0.2 + i * 0.1) + 's'">
+                  @if (solution.iconColor === 'primary') {
+                    <div class="w-9 h-9 bg-primary-600 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-300 animate-pulse-slow">
+                      <svg class="w-5 h-5 text-white group-hover:animate-wiggle" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                      </svg>
+                    </div>
+                  } @else if (solution.iconColor === 'orange') {
+                    <div class="w-9 h-9 bg-orange-500 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-300 animate-pulse-slow">
+                      <svg class="w-5 h-5 text-white group-hover:animate-wiggle" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                      </svg>
+                    </div>
+                  } @else {
+                    <div class="w-9 h-9 bg-yellow-400 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-300 animate-pulse-slow">
+                      <svg class="w-5 h-5 text-white group-hover:animate-wiggle" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                      </svg>
+                    </div>
+                  }
+                </div>
+                
+                <!-- Placeholder si l'image ne charge pas -->
+                <div class="image-placeholder hidden absolute inset-0 items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
+                  <div class="text-center p-3">
+                    <svg class="w-12 h-12 text-gray-400 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <p class="text-gray-500 font-medium text-xs px-2">{{ solution.title }}</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contenu texte -->
+              <div class="p-4 bg-white">
+                <h3 class="text-sm font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-all duration-300 group-hover:translate-x-1">{{ solution.title }}</h3>
+                <p class="text-gray-600 text-xs leading-relaxed mb-3 line-clamp-2 group-hover:text-gray-700 transition-colors duration-300">
+                  {{ solution.description }}
+                </p>
+                
+                <!-- Bouton d'action circulaire -->
+                <div class="flex justify-end">
+                  <button 
+                    class="w-9 h-9 rounded-full bg-white border-2 border-gray-200 hover:border-primary-600 flex items-center justify-center transition-all duration-300 hover:scale-125 hover:rotate-12 shadow-md hover:shadow-lg group-hover:bg-primary-50 animate-float"
+                    [style.animation-delay]="(0.3 + i * 0.1) + 's'">
+                    <svg class="w-4 h-4 text-gray-700 group-hover:text-primary-600 transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
