@@ -1,0 +1,85 @@
+<app-hero-banner
+  title="Sage 100 cloud Paie & RH"
+  subtitle="Gestion complète de la paie et des ressources humaines pour les entreprises en croissance.">
+</app-hero-banner>
+
+<section class="section-padding bg-white">
+  <div class="container-custom">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
+      <!-- Colonne gauche : texte -->
+      <div
+        appRevealOnScroll
+        [direction]="'left'"
+        class="space-y-4 text-gray-700 leading-relaxed"
+        [style.transition-delay]="'0.1s'">
+        <!-- Titre unifié -->
+        <div class="space-y-2 mb-2">
+          <div class="flex items-end gap-1 h-8 mb-1">
+            <div class="w-1 h-4 bg-primary-600 rounded-full"></div>
+            <div class="w-1 h-6 bg-primary-600 rounded-full"></div>
+            <div class="w-1 h-8 bg-primary-600 rounded-full"></div>
+          </div>
+          <span class="text-primary-600 font-bold text-sm uppercase tracking-wider">
+            GESTION DE LA PAIE &amp; RH
+          </span>
+          <h1 class="text-2xl md:text-3xl font-bold text-gray-900">
+            Optimisez votre gestion de la paie et des ressources humaines
+          </h1>
+        </div>
+
+        <!-- Paragraphes -->
+        <p>
+          Avec Sage 100cloud Paie &amp; RH, vous établissez des documents fiables et pilotez le capital humain
+          de votre entreprise avec souplesse.
+        </p>
+        <p>
+          Grâce au Plan de Paie Sage (PPS) pré-paramétré par catégorie de salariés et à la modélisation comptable,
+          vous gérez sereinement les contraintes légales et contraintes règlementaires.
+        </p>
+        <p>
+          Vous accédez à une gestion administrative détaillée des salariés de l’entreprise avec la production de
+          bulletins de paie intégrant une gestion des absences : CP, RTT, etc.
+        </p>
+
+        <!-- Bouton actions -->
+        <div class="pt-2">
+          <a
+            routerLink="/contact"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary-600 text-white text-sm font-semibold hover:bg-primary-700 transition-all duration-300 shadow-sm hover:shadow-md">
+            Cliquez pour découvrir les fonctionnalités
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Colonne droite : carte illustration -->
+      <div
+        appRevealOnScroll
+        [direction]="'right'"
+        [style.transition-delay]="'0.2s'">
+        <div class="bg-white rounded-lg border-r-2 border-b-2 border-primary-600 shadow-sm p-5 h-full flex flex-col justify-between">
+          <div class="space-y-2">
+            <h2 class="text-lg font-bold text-gray-900">
+              Illustration Sage 100cloud Paie &amp; RH
+            </h2>
+            <p class="text-sm text-gray-600">
+              Un visuel mettant en avant la préparation des bulletins de paie, les états sociaux
+              ou le suivi des absences et des droits des collaborateurs.
+            </p>
+          </div>
+
+          <div class="mt-4 h-44 flex items-center justify-center bg-primary-50 rounded-md overflow-hidden">
+            <!-- Remplace cette image par ton illustration réelle -->
+            <img
+              src="assets/images/icons/formation.webp"
+              alt="Illustration Sage 100cloud Paie & RH"
+              class="h-full w-auto object-contain animate-float">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -11,6 +11,10 @@ import { InstallationReseauComponent } from './features/services/installation-re
 import { DeveloppementComponent } from './features/services/developpement/developpement.component';
 import { FormationComponent } from './features/services/formation/formation.component';
 import { PartenaireComponent } from './features/partenaire/partenaire.component';
+import { Sage100PaieRhComponent } from './features/produits/sage-100-paie-rh/sage-100-paie-rh.component';
+import { SageXrtSolutionComponent } from './features/produits/sage-xrt-solution/sage-xrt-solution.component';
+import { SageFrp1000Component } from './features/produits/sage-frp1000/sage-frp1000.component';
+import { BiReportingComponent } from './features/produits/bi-reporting/bi-reporting.component';
 
 export const routes: Routes = [
   {
@@ -74,5 +78,21 @@ export const routes: Routes = [
   {
     path: 'partenaire',
     component: PartenaireComponent
+  },
+  {
+    path: 'produits/sage-100-paie-rh',
+    component: Sage100PaieRhComponent
+  },
+  {
+    path: 'produits/sage-xrt-solution',
+    component: SageXrtSolutionComponent
+  },
+  {
+    path: 'produits/sage-frp1000',
+    component: SageFrp1000Component
+  },
+  {
+    path: 'produits/bi-reporting',
+    component: BiReportingComponent
   }
 ];

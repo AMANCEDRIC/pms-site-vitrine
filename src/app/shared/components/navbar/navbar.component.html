@@ -160,13 +160,120 @@
             </div>
           </div>
         </li>
-        <li>
-          <a 
-            routerLink="/produits" 
-            routerLinkActive="text-primary-600 border-b-2 border-primary-600"
-            class="text-gray-700 font-medium hover:text-primary-600 transition-colors duration-300 pb-1 border-b-2 border-transparent">
+        <li 
+          class="relative"
+          (mouseenter)="openProduitsDropdown()" 
+          (mouseleave)="closeProduitsDropdown()">
+          <button 
+            type="button"
+            class="text-gray-700 font-medium hover:text-orange-500 transition-colors duration-300 pb-1 border-b-2 border-transparent flex items-center gap-1 cursor-pointer"
+            [class.text-orange-500]="isProduitsDropdownOpen">
             Produits
-          </a>
+            <svg class="w-4 h-4 transition-transform duration-300" 
+                 [class.rotate-180]="isProduitsDropdownOpen"
+                 fill="none" 
+                 stroke="currentColor" 
+                 viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+
+          <!-- Mega dropdown Produits -->
+          <div 
+            class="absolute top-full left-0 mt-2 bg-white rounded-md shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 z-50"
+            [ngClass]="{ 'w-[520px]': isSage100cloudHovered, 'w-[260px]': !isSage100cloudHovered }"
+            [class.opacity-0]="!isProduitsDropdownOpen"
+            [class.invisible]="!isProduitsDropdownOpen"
+            [class.opacity-100]="isProduitsDropdownOpen"
+            [class.visible]="isProduitsDropdownOpen">
+            <div 
+              class="grid grid-cols-2"
+              (mouseenter)="onSage100cloudEnter()"
+              (mouseleave)="onSage100cloudLeave()">
+              <!-- Colonne gauche : familles de produits -->
+              <div class="bg-gray-50 min-w-[220px]">
+                <div class="py-2">
+                  <button
+                    type="button"
+                    class="w-full text-left px-4 py-2.5 text-sm font-semibold text-gray-900 bg-white hover:bg-orange-50 hover:text-orange-600 flex items-center justify-between">
+                    <span>Sage 100cloud</span>
+                    <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                  <a
+                    routerLink="/produits/sage-100-paie-rh"
+                    class="block w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">
+                    Sage 100 cloud Paie &amp; RH
+                  </a>
+                  <a
+                    routerLink="/produits/sage-xrt-solution"
+                    class="block w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">
+                    Sage XRT Solution
+                  </a>
+                  <a
+                    routerLink="/produits/sage-frp1000"
+                    class="block w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">
+                    Sage FRP1000
+                  </a>
+                  <a
+                    routerLink="/produits/bi-reporting"
+                    class="block w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">
+                    BI Reporting
+                  </a>
+                  <button
+                    type="button"
+                    class="w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600 flex items-center justify-between">
+                    <span>Autres</span>
+                    <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Colonne droite : sous-menus Sage 100cloud -->
+              <div 
+                class="bg-white min-w-[260px] border-l border-gray-200"
+                [class.hidden]="!isSage100cloudHovered">
+                <div class="py-2">
+                  <div class="px-4 py-2.5 border-b border-gray-100">
+                    <span class="text-xs font-semibold text-orange-500 uppercase tracking-wider">Sage 100cloud</span>
+                  </div>
+                  <a 
+                    href="javascript:void(0)"
+                    class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-orange-600">
+                    Comptabilité
+                  </a>
+                  <a 
+                    href="javascript:void(0)"
+                    class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-orange-600">
+                    Immobilisation
+                  </a>
+                  <a 
+                    href="javascript:void(0)"
+                    class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-orange-600">
+                    Etats financiers
+                  </a>
+                  <a 
+                    href="javascript:void(0)"
+                    class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-orange-600">
+                    Trésorerie
+                  </a>
+                  <a 
+                    href="javascript:void(0)"
+                    class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-orange-600">
+                    Moyen de paiement
+                  </a>
+                  <a 
+                    href="javascript:void(0)"
+                    class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-orange-600">
+                    Gestion commercial
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
         <li>
           <a 

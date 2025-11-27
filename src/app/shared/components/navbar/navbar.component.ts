@@ -15,6 +15,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   isVisible = true;
   isPresentationDropdownOpen = false;
   isServicesDropdownOpen = false;
+  isProduitsDropdownOpen = false;
+  isSage100cloudHovered = false;
   private scrollThreshold = 50; // Pixels de scroll avant d'activer l'animation
   private lastScrollPosition = 0;
   private hideTimeout?: any;
@@ -109,6 +111,27 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   closeServicesDropdown() {
     this.isServicesDropdownOpen = false;
+  }
+
+  toggleProduitsDropdown() {
+    this.isProduitsDropdownOpen = !this.isProduitsDropdownOpen;
+  }
+
+  openProduitsDropdown() {
+    this.isProduitsDropdownOpen = true;
+  }
+
+  closeProduitsDropdown() {
+    this.isProduitsDropdownOpen = false;
+    this.isSage100cloudHovered = false;
+  }
+
+  onSage100cloudEnter() {
+    this.isSage100cloudHovered = true;
+  }
+
+  onSage100cloudLeave() {
+    this.isSage100cloudHovered = false;
   }
 }
 
