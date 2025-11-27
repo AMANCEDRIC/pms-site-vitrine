@@ -28,51 +28,70 @@
         <!-- Contenu en 2 colonnes -->
         <div class="grid lg:grid-cols-2 gap-10 items-start">
           <!-- Colonne texte -->
-          <div class="space-y-4 text-gray-700 leading-relaxed animate-fade-in-up">
-            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 animate-fade-in-up">
+          <div class="space-y-4 text-gray-700 leading-relaxed">
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
               Installation de réseau informatique
             </h1>
 
-            <div class="space-y-2 pb-4 border-b border-primary-200 animate-fade-in-up" style="animation-delay: 0.1s">
+            <div 
+              appRevealOnScroll
+              [direction]="'left'"
+              class="space-y-2 pb-4 border-b border-primary-200"
+              [style.transition-delay]="'0.1s'">
               <p>
-                Le terme générique <span class="font-semibold text-primary-700">« réseau »</span> définit un ensemble d’entités
+                Le terme générique <span class="font-semibold text-primary-700">« réseau »</span> définit un ensemble d'entités
                 (objets, personnes, etc.) interconnectées les unes avec les autres. Un réseau permet ainsi de faire
                 circuler des éléments matériels ou immatériels entre chacune de ces entités selon des règles bien définies.
               </p>
             </div>
 
-            <div class="space-y-2 py-4 border-b border-primary-200 animate-fade-in-up" style="animation-delay: 0.2s">
+            <div 
+              appRevealOnScroll
+              [direction]="'left'"
+              class="space-y-2 py-4 border-b border-primary-200"
+              [style.transition-delay]="'0.2s'">
               <p class="font-medium text-gray-900">
                 Vous construisez un <span class="text-primary-700">nouveau bâtiment</span>, vous rénovez votre infrastructure,
                 vous déménagez dans de nouveaux locaux, vous réaménagez les vôtres ?
-                <span class="text-orange-500 font-semibold">L’effectif de votre entreprise augmente ?</span>
+                <span class="text-orange-500 font-semibold">L'effectif de votre entreprise augmente ?</span>
               </p>
               <p>
-                Quelle que soit la situation, vous avez besoin d’une installation de
+                Quelle que soit la situation, vous avez besoin d'une installation de
                 <span class="font-semibold text-primary-700">câblage structuré</span>, complète ou partielle, de prises et câbles
                 électriques, informatiques et téléphoniques qui soient fiables et sécurisés.
               </p>
             </div>
 
-            <div class="space-y-2 py-4 border-b border-primary-200 animate-fade-in-up" style="animation-delay: 0.3s">
+            <div 
+              appRevealOnScroll
+              [direction]="'left'"
+              class="space-y-2 py-4 border-b border-primary-200"
+              [style.transition-delay]="'0.3s'">
               <p>
-                Grâce aux compétences et à l’expérience de <span class="font-semibold text-primary-700">PMS Informatique</span>,
-                profitez d’un service de qualité dispensé par des professionnels
+                Grâce aux compétences et à l'expérience de <span class="font-semibold text-primary-700">PMS Informatique</span>,
+                profitez d'un service de qualité dispensé par des professionnels
                 <span class="text-orange-500">certifiés dans différents systèmes de câblage</span>.
               </p>
             </div>
 
-            <div class="space-y-2 pt-4 animate-fade-in-up" style="animation-delay: 0.4s">
+            <div 
+              appRevealOnScroll
+              [direction]="'left'"
+              class="space-y-2 pt-4"
+              [style.transition-delay]="'0.4s'">
               <p>
                 Après avoir, ensemble, défini vos besoins et étudié les solutions à mettre en œuvre,
-                PMS Informatique assure la fourniture et l’installation des éléments suivants :
+                PMS Informatique assure la fourniture et l'installation des éléments suivants :
               </p>
             </div>
           </div>
 
           <!-- Colonne droite : une seule grande carte avec tous les câblages -->
-          <div class="animate-fade-in-up" style="animation-delay: 0.2s">
-            <div class="bg-white rounded-lg border-r-2 border-b-2 border-primary-600 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 p-6 h-full flex flex-col justify-between animate-fade-in-up" style="animation-delay: 0.25s">
+          <div 
+            appRevealOnScroll
+            [direction]="'right'"
+            [style.transition-delay]="'0.2s'">
+            <div class="bg-white rounded-lg border-r-2 border-b-2 border-primary-600 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 p-6 h-full flex flex-col justify-between">
               <div class="space-y-3">
                 <!-- Titre -->
                 <h2 class="text-lg md:text-xl font-bold text-gray-900">

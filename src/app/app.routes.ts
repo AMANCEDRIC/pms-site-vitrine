@@ -10,6 +10,7 @@ import { IntegrateurSolutionComponent } from './features/services/integrateur-so
 import { InstallationReseauComponent } from './features/services/installation-reseau/installation-reseau.component';
 import { DeveloppementComponent } from './features/services/developpement/developpement.component';
 import { FormationComponent } from './features/services/formation/formation.component';
+import { PartenaireComponent } from './features/partenaire/partenaire.component';
 
 export const routes: Routes = [
   {
@@ -69,5 +70,9 @@ export const routes: Routes = [
         component: FormationComponent
       }
     ]
+  },
+  {
+    path: 'partenaire',
+    component: PartenaireComponent
   }
 ];

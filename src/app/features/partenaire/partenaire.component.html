@@ -1,0 +1,39 @@
+<div class="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+  <!-- Hero Section -->
+  <app-hero-banner
+    title="Nos partenaires"
+    subtitle="Des partenaires technologiques et stratégiques pour accompagner vos projets">
+  </app-hero-banner>
+
+  <section class="section-padding">
+    <div class="container-custom max-w-6xl mx-auto">
+      <!-- Titre -->
+      <div class="text-center mb-10 animate-fade-in-up">
+        <span class="text-primary-600 font-bold text-sm uppercase tracking-wider">
+          Nos partenaires technologiques
+        </span>
+        <p class="mt-3 text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
+          PMS Informatique s’appuie sur un réseau de partenaires reconnus pour garantir la qualité,
+          la performance et la pérennité de vos solutions.
+        </p>
+      </div>
+
+      <!-- Grille des logos -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-7">
+        @for (partner of partners; track partner.name; let i = $index) {
+          <div
+            appRevealOnScroll
+            class="bg-white rounded-md border border-gray-100 shadow-none hover:shadow-sm transition-all duration-700 flex items-center justify-center p-8 min-h-[140px]"
+            [style.transitionDelay]="(0.1 + i * 0.06) + 's'">
+            <img
+              [src]="partner.logo"
+              [alt]="partner.name"
+              class="h-16 w-auto object-contain" />
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+</div>
+
+

@@ -10,7 +10,7 @@
     <div class="container-custom">
       <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
         <!-- Colonne texte -->
-        <div class="space-y-6 text-gray-700 leading-relaxed animate-fade-in-up">
+        <div class="space-y-6 text-gray-700 leading-relaxed">
           <!-- Titre de section -->
           <div class="space-y-2">
             <div class="flex items-end gap-1 h-8 mb-1">
@@ -27,7 +27,11 @@
           </div>
 
           <!-- Bloc 1 : Développement spécifique -->
-          <div class="space-y-2 pb-4 border-b border-primary-200 animate-fade-in-up" style="animation-delay: 0.1s">
+          <div 
+            appRevealOnScroll
+            [direction]="'left'"
+            class="space-y-2 pb-4 border-b border-primary-200"
+            [style.transition-delay]="'0.1s'">
             <h2 class="text-lg font-bold text-gray-900">Développement spécifique</h2>
             <p>
               Notre savoir-faire et notre expertise dans la mise en œuvre des logiciels Sage au sein de
@@ -38,7 +42,11 @@
           </div>
 
           <!-- Bloc 2 : Audit informatique -->
-          <div class="space-y-2 py-4 border-b border-primary-200 animate-fade-in-up" style="animation-delay: 0.2s">
+          <div 
+            appRevealOnScroll
+            [direction]="'left'"
+            class="space-y-2 py-4 border-b border-primary-200"
+            [style.transition-delay]="'0.2s'">
             <h2 class="text-lg font-bold text-gray-900">Audit informatique</h2>
             <p>
               L’audit informatique a pour objectif de s’assurer que les activités informatiques d’une
@@ -50,7 +58,11 @@
           </div>
 
           <!-- Bloc 3 : Audit des applications -->
-          <div class="space-y-2 pt-4 animate-fade-in-up" style="animation-delay: 0.3s">
+          <div 
+            appRevealOnScroll
+            [direction]="'left'"
+            class="space-y-2 pt-4"
+            [style.transition-delay]="'0.3s'">
             <h2 class="text-lg font-bold text-gray-900">Audit des applications</h2>
             <p>
               On peut aller plus loin et évaluer les systèmes d’information eux-mêmes : c’est le domaine
@@ -62,8 +74,11 @@
         </div>
 
         <!-- Colonne droite : carte / illustration -->
-        <div class="animate-fade-in-up" style="animation-delay: 0.2s">
-          <div class="bg-white rounded-lg border-r-2 border-b-2 border-primary-600 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 p-6 h-full flex flex-col justify-between animate-fade-in-up" style="animation-delay: 0.25s">
+        <div 
+          appRevealOnScroll
+          [direction]="'right'"
+          [style.transition-delay]="'0.2s'">
+          <div class="bg-white rounded-lg border-r-2 border-b-2 border-primary-600 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 p-6 h-full flex flex-col justify-between">
             <div class="space-y-3">
               <h3 class="text-lg font-bold text-gray-900">
                 Nos atouts en développement

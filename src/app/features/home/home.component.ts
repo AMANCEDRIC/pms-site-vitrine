@@ -8,6 +8,7 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
 import { TestimonialsComponent } from '../../shared/components/testimonials/testimonials.component';
 import { PartnersCarouselComponent } from '../../shared/components/partners-carousel/partners-carousel.component';
 import { AvisFormComponent } from '../../shared/components/avis-form/avis-form.component';
+import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scroll.directive';
 import { Subscription } from 'rxjs';
 
 interface Statistic {
@@ -40,7 +41,8 @@ interface Service {
     HeroSectionComponent,
     TestimonialsComponent,
     PartnersCarouselComponent,
-    AvisFormComponent
+    AvisFormComponent,
+    RevealOnScrollDirective
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

@@ -35,7 +35,11 @@
         <!-- Grille des domaines de formation -->
         <div class="grid md:grid-cols-2 gap-8">
           <!-- Bloc 1 : Produits PE / API -->
-          <div class="bg-primary-50 rounded-lg border-r-2 border-b-2 border-primary-600 p-6 shadow-sm">
+          <div 
+            appRevealOnScroll
+            [direction]="'left'"
+            class="bg-primary-50 rounded-lg border-r-2 border-b-2 border-primary-600 p-6 shadow-sm"
+            [style.transition-delay]="'0.1s'">
             <h2 class="flex items-center gap-2 text-lg font-bold text-gray-900 mb-4">
               <span class="w-7 h-7 rounded-full bg-primary-600 flex items-center justify-center text-white text-xs">PE</span>
               <span>Nos domaines d’activités</span>
@@ -62,7 +66,11 @@
           </div>
 
           <!-- Bloc 2 : Produits PME -->
-          <div class="bg-white rounded-lg border-r-2 border-b-2 border-primary-600 p-6 shadow-sm">
+          <div 
+            appRevealOnScroll
+            [direction]="'right'"
+            class="bg-white rounded-lg border-r-2 border-b-2 border-primary-600 p-6 shadow-sm"
+            [style.transition-delay]="'0.2s'">
             <h3 class="flex items-center gap-2 text-lg font-bold text-gray-900 mb-4">
               <span class="w-7 h-7 rounded-full bg-primary-600 flex items-center justify-center text-white text-xs">PME</span>
               <span>Formations Produits PME</span>
@@ -126,7 +134,11 @@
           </div>
 
           <!-- Bloc 3 : MGE -->
-          <div class="bg-primary-50 rounded-lg border-r-2 border-b-2 border-primary-600 p-6 shadow-sm">
+          <div 
+            appRevealOnScroll
+            [direction]="'left'"
+            class="bg-primary-50 rounded-lg border-r-2 border-b-2 border-primary-600 p-6 shadow-sm"
+            [style.transition-delay]="'0.3s'">
             <h3 class="flex items-center gap-2 text-lg font-bold text-gray-900 mb-4">
               <span class="w-7 h-7 rounded-full bg-primary-600 flex items-center justify-center text-white text-xs">MGE</span>
               <span>Autres formations – Produits MGE</span>
@@ -184,7 +196,11 @@
           </div>
 
           <!-- Bloc 4 : Sage Immobilisations 1000 -->
-          <div class="bg-white rounded-lg border-r-2 border-b-2 border-primary-600 p-6 shadow-sm">
+          <div 
+            appRevealOnScroll
+            [direction]="'right'"
+            class="bg-white rounded-lg border-r-2 border-b-2 border-primary-600 p-6 shadow-sm"
+            [style.transition-delay]="'0.4s'">
             <h3 class="flex items-center gap-2 text-lg font-bold text-gray-900 mb-4">
               <span class="w-7 h-7 rounded-full bg-primary-600 flex items-center justify-center text-white text-xs">IMM</span>
               <span>Sage Immobilisations 1000</span>
@@ -218,7 +234,11 @@
 
         <!-- Salle de formation -->
         <div class="grid lg:grid-cols-2 gap-8 items-center">
-          <div class="space-y-3 text-gray-700 leading-relaxed">
+          <div 
+            appRevealOnScroll
+            [direction]="'left'"
+            class="space-y-3 text-gray-700 leading-relaxed"
+            [style.transition-delay]="'0.5s'">
             <h2 class="text-xl font-bold text-gray-900">Salle de formation</h2>
             <p>
               Notre salle de formation est spécialement aménagée pour accueillir vos équipes dans des
@@ -226,7 +246,10 @@
               pratiques et interactives.
             </p>
           </div>
-          <div class="animate-fade-in-up" style="animation-delay: 0.1s">
+          <div 
+            appRevealOnScroll
+            [direction]="'right'"
+            [style.transition-delay]="'0.6s'">
             <div class="rounded-2xl overflow-hidden shadow-lg bg-gray-200 h-56">
               <!-- <img src="assets/images/.../salle-formation.jpg" class="w-full h-full object-cover" alt="Salle de formation PMS"> -->
             </div>
