@@ -15,6 +15,12 @@ import { Sage100PaieRhComponent } from './features/produits/sage-100-paie-rh/sag
 import { SageXrtSolutionComponent } from './features/produits/sage-xrt-solution/sage-xrt-solution.component';
 import { SageFrp1000Component } from './features/produits/sage-frp1000/sage-frp1000.component';
 import { BiReportingComponent } from './features/produits/bi-reporting/bi-reporting.component';
+import { ComptabiliteComponent } from './features/produits/sage-100cloud/comptabilite/comptabilite.component';
+import { ImmobilisationComponent } from './features/produits/sage-100cloud/immobilisation/immobilisation.component';
+import { EtatsFinanciersComponent } from './features/produits/sage-100cloud/etats-financiers/etats-financiers.component';
+import { TresorerieComponent } from './features/produits/sage-100cloud/tresorerie/tresorerie.component';
+import { MoyenDePaiementComponent } from './features/produits/sage-100cloud/moyen-de-paiement/moyen-de-paiement.component';
+import { GestionCommercialeComponent } from './features/produits/sage-100cloud/gestion-commerciale/gestion-commerciale.component';
 
 export const routes: Routes = [
   {
@@ -94,5 +100,29 @@ export const routes: Routes = [
   {
     path: 'produits/bi-reporting',
     component: BiReportingComponent
+  },
+  {
+    path: 'produits/sage-100cloud/comptabilite',
+    component: ComptabiliteComponent
+  },
+  {
+    path: 'produits/sage-100cloud/immobilisation',
+    component: ImmobilisationComponent
+  },
+  {
+    path: 'produits/sage-100cloud/etats-financiers',
+    component: EtatsFinanciersComponent
+  },
+  {
+    path: 'produits/sage-100cloud/tresorerie',
+    component: TresorerieComponent
+  },
+  {
+    path: 'produits/sage-100cloud/moyen-de-paiement',
+    component: MoyenDePaiementComponent
+  },
+  {
+    path: 'produits/sage-100cloud/gestion-commerciale',
+    component: GestionCommercialeComponent
   }
 ];

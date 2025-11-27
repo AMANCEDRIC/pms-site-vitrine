@@ -1,0 +1,102 @@
+<app-hero-banner
+  title="Sage 100cloud - Comptabilité"
+  subtitle="Pilotez votre comptabilité générale et analytique avec précision.">
+</app-hero-banner>
+
+<section class="section-padding bg-white">
+  <div class="container-custom">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
+      <!-- Colonne gauche : texte -->
+      <div
+        appRevealOnScroll
+        [direction]="'left'"
+        class="space-y-4 text-gray-700 leading-relaxed"
+        [style.transition-delay]="'0.1s'">
+        <div class="space-y-2 mb-2">
+          <div class="flex items-end gap-1 h-8 mb-1">
+            <div class="w-1 h-4 bg-primary-600 rounded-full"></div>
+            <div class="w-1 h-6 bg-primary-600 rounded-full"></div>
+            <div class="w-1 h-8 bg-primary-600 rounded-full"></div>
+          </div>
+          <span class="text-primary-600 font-bold text-sm uppercase tracking-wider">
+            COMPTABILITÉ GÉNÉRALE &amp; ANALYTIQUE
+          </span>
+          <h1 class="text-2xl md:text-3xl font-bold text-gray-900">
+            Une comptabilité fiable au cœur de Sage 100cloud
+          </h1>
+        </div>
+
+        <p class="text-gray-700 leading-relaxed mb-3">
+          Tirez pleinement parti des fonctionnalités comptables essentielles rassemblées dans une solution intégrée :
+          saisie simplifiée, documents prêts à l’emploi, gestion des abonnements, rapprochement bancaire manuel
+          et automatique, reporting, contrôles comptables, gestion des collaborateurs.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-3">
+          Exploitez tout le potentiel des fonctions d’analyse : création de plans analytiques structurés, bilan et
+          compte de résultat analytique, états (balance, grand livre, etc.).
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-3">
+          Gérez votre comptabilité sans faute : conformité légale IAS/ IFRS, état de pré-contrôle, production du fichier
+          des écritures comptables (F.E.C.) provisoire et définitif, impression de l’attestation F.E.C, sauvegarde fiscale
+          vous permettant d’automatiser la production des éléments à fournir en cas de contrôle fiscal.
+        </p>
+
+        <!-- Bouton téléchargement fonctionnalités -->
+        <div class="pt-1">
+          <a
+            href="assets/docs/sage-100cloud-comptabilite-fonctionnalites.pdf"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary-600 text-white text-sm font-semibold hover:bg-primary-700 transition-all duration-300 shadow-sm hover:shadow-md">
+            Cliquez pour découvrir les fonctionnalités
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v16h16M12 16V4m0 12l-4-4m4 4l4-4"></path>
+            </svg>
+          </a>
+        </div>
+
+        <ul class="space-y-2 text-sm text-gray-700 pt-3">
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary-600"></span>
+            <span>Saisie et lettrage assistés, modèles et journaux paramétrables.</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary-600"></span>
+            <span>Suivi précis de la comptabilité analytique et des budgets.</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary-600"></span>
+            <span>Nombreux états standards et exports vers Excel pour l’analyse.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Colonne droite : carte illustration -->
+      <div
+        appRevealOnScroll
+        [direction]="'right'"
+        [style.transition-delay]="'0.2s'">
+        <div class="bg-white rounded-lg border-r-2 border-b-2 border-primary-600 shadow-sm p-5 h-full flex flex-col justify-between">
+          <div class="space-y-2">
+            <h2 class="text-lg font-bold text-gray-900">
+              Vue synthétique de vos comptes
+            </h2>
+            <p class="text-sm text-gray-600">
+              Tableaux de bord de soldes, balances et états analytiques pour suivre la performance de
+              votre activité en temps quasi réel.
+            </p>
+          </div>
+
+          <div class="mt-4 h-44 flex items-center justify-center bg-primary-50 rounded-md overflow-hidden">
+            <img
+              src="assets/images/icons/gradient.png"
+              alt="Illustration Sage 100cloud Comptabilité"
+              class="h-full w-auto object-contain animate-float">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

@@ -1,0 +1,73 @@
+<app-hero-banner
+  title="Sage 100cloud - États financiers"
+  subtitle="Produisez vos bilans et comptes de résultat rapidement et en toute conformité.">
+</app-hero-banner>
+
+<section class="section-padding bg-white">
+  <div class="container-custom">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
+      <!-- Colonne gauche : texte -->
+      <div
+        appRevealOnScroll
+        [direction]="'left'"
+        class="space-y-4 text-gray-700 leading-relaxed"
+        [style.transition-delay]="'0.1s'">
+        <div class="space-y-2 mb-2">
+          <div class="flex items-end gap-1 h-8 mb-1">
+            <div class="w-1 h-4 bg-primary-600 rounded-full"></div>
+            <div class="w-1 h-6 bg-primary-600 rounded-full"></div>
+            <div class="w-1 h-8 bg-primary-600 rounded-full"></div>
+          </div>
+          <span class="text-primary-600 font-bold text-sm uppercase tracking-wider">
+            GESTION COMPTABLE ET FINANCIÈRE
+          </span>
+          <h1 class="text-2xl md:text-3xl font-bold text-gray-900">
+            Gestion Comptable et Financière
+          </h1>
+        </div>
+
+        <p class="text-gray-700 leading-relaxed">
+          Tirez pleinement parti de fonctionnalités comptables essentielles rassemblées dans une solution intégrée : saisie simplifiée, documents prêts à l'emploi, gestion des abonnements, rapprochement bancaire manuel et automatique, reporting, contrôles comptables, gestion des collaborateurs.
+        </p>
+
+        <div class="pt-4">
+          <a
+            href="assets/docs/sage-100cloud-etats-financiers-fonctionnalites.pdf"
+            target="_blank"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-md hover:bg-primary-700 transition-colors duration-200 shadow-sm hover:shadow-md">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            Cliquez pour découvrir les fonctionnalités
+          </a>
+        </div>
+      </div>
+
+      <!-- Colonne droite : carte illustration -->
+      <div
+        appRevealOnScroll
+        [direction]="'right'"
+        [style.transition-delay]="'0.2s'">
+        <div class="bg-white rounded-lg border-r-2 border-b-2 border-primary-600 shadow-sm p-5 h-full flex flex-col justify-between">
+          <div class="space-y-2">
+            <h2 class="text-lg font-bold text-gray-900">
+              Vue d'ensemble de votre gestion comptable
+            </h2>
+            <p class="text-sm text-gray-600">
+              Accédez à une solution complète et intégrée pour gérer efficacement votre comptabilité et vos états financiers.
+            </p>
+          </div>
+
+          <div class="mt-4 h-44 flex items-center justify-center bg-primary-50 rounded-md overflow-hidden">
+            <img
+              src="assets/images/icons/gradient.png"
+              alt="Illustration États financiers Sage 100cloud"
+              class="h-full w-auto object-contain animate-float">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
